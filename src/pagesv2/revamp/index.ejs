@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Optimize CCTV video storage efficiency with Kecilin. Enhance CCTV benefits with Kecilin's computer vision technology.">
+  <title>Kecilin: Data Compression & Computer Vision Platform</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/assts/images/kecilin/logo.png" />
+  <!-- Bootstrap CSS -->
+  <!-- <link rel="stylesheet" href="/assts/css/bootstrap.min.css" /> -->
+  <link rel="stylesheet" href="/assts/css/custom-revamp.css" />
+  <link rel="stylesheet" href="/assts/css/dropzone.css" />
+  <link rel="stylesheet" href="/assts/css/upload.css" />
+  <link rel="stylesheet" href="/assts/bootstrap-5.3.2/css/bootstrap.min.css">
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NVN5MHB6');
+  </script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NVN5MHB6" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="section__trial" id="trial">
+    <section class="section__wrapper">
+      <div class="container">
+        <div class="row mx-0 mx-lg-5">
+          <div class="col-12 col-lg-6 px-5 align-items-center d-flex">
+            <div class="section__compress">
+              <h3 class="section__title_2 section__title--trial">
+                Experience our advanced
+                compression engine here.
+              </h3>
+              <p class="text--trial">Upload jpg, jpeg or png without ads, watermark and any email registration with max
+                file 200MB. Don't worry, your file will be encrypted automatically in our system, even we can't open it
+                😉</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="trial__wrapper">
+              <ul class="nav nav-pills align-items-center mb-3 trial__tabs bg-gray p-2" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="pills-compress-tab" data-bs-toggle="pill"
+                    data-bs-target="#pills-compress" type="button" role="tab" aria-controls="pills-compress"
+                    aria-selected="false">Photo
+                    Compression</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active d-none" id="pills-people" role="tabpanel"
+                  aria-labelledby="pills-people-tab">
+                  <div class="drag-cover">
+                    <div class="drag-area drag-area-people" ondragover="return false">
+                        <input type="file" name="file" id="file1" hidden>
+                    </div>
+                  </div>
+                </div>
+                <div class="" id="pills-compress" role="tabpanel" aria-labelledby="pills-compress-tab">
+                  <div class="text-center pb-3 pt-2">
+                    <span class="fw-bold">Compress now</span>
+                  </div>
+                  <div class="drag-cover">
+                    <div class="drag-area drag-area-compress" ondragover="return false">
+                      <div class="default">
+                        <div class="icon">
+                          <img class="icon-trial" src="/assts/images/kecilin-v3/img-icon.svg" alt="icon image"
+                            width="30%">
+                        </div>
+                        <button class="btn-select btn-trial">Select Image</button>
+                        <span class="drop-text">or drop image here to upload it</span>
+                        <span class="max-size-text">Max file size 200MB</span>
+                        <input type="file" name="file" id="file2" hidden>
+                      </div>
+                      <div class="result"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="modal modal-form fade" id="peopleCountingFormModal" data-bs-backdrop="static" data-bs-keyboard="false"
+    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center py-5">
+          <img src="/assts/images/kecilin-v3/envelop.svg" alt="Icon envelop" class="mb-3">
+          <h6>Fill out the form below to download your image</h6>
+          <form action="" class="px-4 pt-3" id="storeCompanyForm">
+            <div>
+              <input type="hidden" id="type" name="type" value="compress">
+              <input required class="form-control" type="text" name="companyData" id="companyData"
+                placeholder="Company Data">
+              <label id="company-error" class="error d-none" for="problem" style=""></label>
+              <input required class="form-control mt-3" type="text" name="problem" id="problem"
+                placeholder="Problem Encountered">
+              <label id="problem-error" class="error d-none" for="phone" style=""></label>
+              <input required class="form-control mt-3" type="tel" name="phone" id="phone"
+                placeholder="Whatsapp Number">
+              <label id="phone-error" class="error d-none" for="phone" style=""></label>
+            </div>
+            <button type="button" id="btnSendUser" class="btn btn-download mt-3">Send & Download</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-preview fade" id="compressionPreviewModal" data-bs-backdrop="static" data-bs-keyboard="false"
+    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center py-3">
+          <h6>Photo Compression Result</h6>
+          <div class="result-box">
+            <div class="result-area">
+              <div class="result-img-container">
+
+              </div>
+              <div class="d-flex justify-content-center gap-3">
+                <h6 class="text-original">Original Size : <span class="text-danger">0</span></h6>
+                <h6 class="text-compress">Compressed Size : <span class="text-danger">0</span></h6>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer modal-bottom-compress justify-content-center border-0">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="errorLimitModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="errorLimitModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center p-5">
+          <img src="/assts/images/kecilin-v3/error.svg" alt="Error Image">
+          <h3 class="py-3">Sorry!</h3>
+          <p>You have exceeded the 10x daily usage limit for this feature, please contact
+            the admin if you are interested in our solution </p>
+          <a href="#" class="btn btn-main btn-contact-us btn-whatsapp">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="errorModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center p-5">
+          <img src="/assts/images/kecilin-v3/error.svg" alt="Error Image">
+          <h3 class="py-3">Sorry!</h3>
+          <p class="error-message"></p>
+          <button type="button" class="btn btn-main btn-error-modal" data-bs-dismiss="modal">Try Again</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  bootstrap -->
+  <script src="/assts/bootstrap-5.3.2/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+  <!-- <script src="/assts/js/sofbox-custom.js"></script> -->
+  <script src="/assts/js/download.js"></script>
+  <script src="/assts/js/beforeafter/beforeafter.jquery-1.0.0.js"></script>
+  <script src="/assts/js/jquery.validate.js"></script>
+  <!-- <script src="/assts/js/dragdrop.js"></script> -->
+  <script src="/assts/js/sendwhatsapp.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- <script src="/assts/js/upload-people-counting.js"></script> -->
+  <script src="/assts/js/upload-compress.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/assts/js/navbar.js"></script>
+
+  <!-- custom script -->
+  <script>
+    $('.trial__tabs .nav-link').click(function () {
+      var selectedNavItem = document.querySelector(".nav-link.active");
+      var selectedNavItemID = selectedNavItem.getAttribute("id");
+
+      if (selectedNavItemID == 'pills-compress-tab') {
+        $('.section__compress').removeClass('d-none')
+        $('.section__people').addClass('d-none')
+      } else {
+        $('.section__compress').addClass('d-none')
+        $('.section__people').removeClass('d-none')
+      }
+    })
+  </script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

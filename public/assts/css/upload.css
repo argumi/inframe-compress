@@ -1,0 +1,184 @@
+.drag-cover {
+  border: 2px dashed #0096D7;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.drag-area .default,
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 400px;
+  width: 100%;
+}
+
+.drag-area {
+  padding: 10px;
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  height: 400px;
+  width: 100%;
+
+}
+
+.drag-area:hover {
+  background-color: #F6F6F6;
+  ;
+
+}
+
+.drag-area.active {
+  border: 2px solid #fff;
+}
+
+.drag-area .icon {
+  margin-bottom: 20px;
+}
+
+.drag-area .icon img {
+  height: 90%;
+  width: 100%;
+}
+
+.drag-area header {
+  font-size: 30px;
+  font-weight: 500;
+  color: #000;
+}
+
+.drag-area span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  margin: 10px 0 15px 0;
+  text-align: center;
+}
+
+.drag-area .max-size-text {
+  background: #E4E4E4;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.drag-area .btn-select {
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: #0096D7;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.drag-area button:hover {
+  background: #02b3ff;
+}
+
+.drag-area .image-preview {
+  /* height: 100%; */
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  /* object-fit: cover;
+    border-radius: 5px; */
+}
+
+
+
+.box-img {
+  position: relative;
+  max-width: 300px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(78, 78, 78, 0.5);
+  /* Black see-through */
+  color: #f1f1f1;
+  /* Text color */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
+  font-size: 20px;
+  opacity: 1;
+}
+
+.overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensure the image covers the entire overlay */
+  opacity: 0;
+  /* Initially hidden */
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+
+
+
+@media (max-width: 745px) {
+
+  .drag-area button {
+    padding: 8px 20px;
+    font-size: 18px;
+    font-weight: 450;
+  }
+
+  .drag-area {
+    height: 400px;
+    width: 100%;
+  }
+
+  .drag-area header {
+    font-size: 25px;
+    font-weight: 450;
+    color: #fff;
+  }
+
+  .drag-area .icon {
+    font-size: 80px;
+  }
+
+  .drag-area .icon img {
+    height: 75%;
+  }
+
+}
+
+@media (max-width: 575.98px) {
+  .drag-area .icon img {
+    height: 50%;
+  }
+
+  .drag-area .btn-select {
+    font-size: 12px;
+  }
+
+  .drag-area span {
+    font-size: 12px;
+    text-align: center;
+  }
+
+}

@@ -1,0 +1,9 @@
+.env
+public/assets/asli/*
+public/assets/compress/*
+node_modules
+.idea
+
+public/compressing/*
+public/compressing_out/*
+public/people_counting/*

@@ -1,0 +1,32 @@
+stages:      
+  - deploy
+
+deploy-job-staging: 
+  stage: deploy
+  only:
+    - staging
+  tags:
+    - staging
+  script:
+    - export NVM_DIR="$HOME/.nvm"; [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"; [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+    - nvm use 14 || nvm install 14
+    - cd /home/kecilin/STAGING-kecilin-landingpage
+    - git checkout .
+    - git pull
+    - npm install
+    - pm2 restart STAGING-kecilin-landingpage
+
+deploy-job-production: 
+  stage: deploy
+  only:
+    - main
+  tags:
+    - main
+  script:
+    - export NVM_DIR="$HOME/.nvm"; [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"; [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+    - nvm use 14 || nvm install 14
+    - cd /home/kecilin/PRODUCTION-kecilin-landingpage
+    - git checkout .
+    - git pull
+    - npm install
+    - pm2 restart PROD-kecilin-landingpage

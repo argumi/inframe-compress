@@ -1,0 +1,16 @@
+.dropzone-dragging {
+    background-color: #00BCEB69;
+    transition: .15s ease;
+}
+
+.file-added {
+    font-size: 24px;
+    font-weight: 600;
+    color: #232F3E;
+}
+
+@media screen and (max-width: 28em) {
+    .file-added {
+        font-size: 18px;
+    }
+}

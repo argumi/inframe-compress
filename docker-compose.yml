@@ -1,0 +1,10 @@
+version: '2.0'
+services:
+  kecilinid-app:
+    container_name: 'kecilinid-app'
+    image: 'nginx:latest'
+    volumes:
+      - ./:./
+    worker_dir: ./
+    ports: 
+      - 10080:80
